@@ -3,10 +3,64 @@
     <title>gioos</title>
     <link href="https://eze1981.github.io/feed.xml" rel="self" />
     <link href="https://eze1981.github.io" />
-    <updated>1969-12-31T19:00:00-05:00</updated>
+    <updated>2019-04-20T22:10:58-04:00</updated>
     <author>
         <name>Ezequiel Gioia</name>
     </author>
     <id>https://eze1981.github.io</id>
 
+    <entry>
+        <title>Dev Notes</title>
+        <author>
+            <name>Ezequiel Gioia</name>
+        </author>
+        <link href="https://eze1981.github.io/dev-notes/"/>
+        <id>https://eze1981.github.io/dev-notes/</id>
+
+        <updated>2019-04-20T22:09:52-04:00</updated>
+            <summary>
+                <![CDATA[
+                    This post is just a public collection of commands that I always&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <div>This post is just a public collection of commands that I always forget.</div>
+<h2 id="mcetoc_1d8kh0skb2">conda</h2>
+<pre><code class="language-bash"># list available environments
+conda env list
+
+# listing installed packages in current environment
+conda list
+
+# activate environment
+conda activate env-name
+
+# install package
+conda install keras
+</code></pre>
+<h2 id="mcetoc_1d8kh0skb2">docker</h2>
+<pre><code class="language-bash"># delete all containers
+docker rm $(docker ps -a -q)
+
+# delete all images
+docker rmi $(docker images -q)
+
+# inspect container
+docker inspect [container-id]
+
+# build image from Dockerfileopendiff
+docker build -t [username]/[image-name] .
+
+# create and run a container
+docker run -it -p 4000:4000 -v $PWD:/var/www [image-name] bash
+</code></pre>
+(https://github.com/mhart/alpine-node)
+<h2 id="mcetoc_1d8kh0skb2">files</h2>
+<pre><code class="language-bash"># compress directory
+zip ../elixir-3-app.zip -r * .[^.]*
+</code></pre>
+            ]]>
+        </content>
+    </entry>
 </feed>

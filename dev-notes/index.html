@@ -1,0 +1,59 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Dev Notes - gioos</title><meta name="robots" content="index, follow"><meta name="generator" content="Publii Open-Source CMS for Static Site"><link rel="canonical" href="https://eze1981.github.io/dev-notes/"><link rel="amphtml" href="https://eze1981.github.io/amp/dev-notes/"><link type="application/atom+xml" rel="alternate" href="https://eze1981.github.io/feed.xml"><meta property="og:title" content="Dev Notes"><meta property="og:site_name" content="My blog - gioos"><meta property="og:description" content="This post is just a public collection of commands that I always&hellip;"><meta property="og:url" content="https://eze1981.github.io/dev-notes/"><meta property="og:type" content="article"><meta name="twitter:card" content="summary"><meta name="twitter:site" content="@eze1981"><meta name="twitter:title" content="Dev Notes"><meta name="twitter:description" content="This post is just a public collection of commands that I always&hellip;"><link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin><link href="https://fonts.googleapis.com/css?family=Heebo:400,500%7CPlayfair+Display:400" rel="stylesheet"><link rel="stylesheet" href="https://eze1981.github.io/assets/css/style.css?v=f97c6768e19743d8b7729fc8c82b6d0a"><script type="application/ld+json">{"@context":"http://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https://eze1981.github.io/dev-notes/"},"headline":"Dev Notes","datePublished":"2019-04-15T21:25","dateModified":"2019-04-20T22:09","description":"This post is just a public collection of commands that I always&hellip;","author":{"@type":"Person","name":"Ezequiel Gioia"},"publisher":{"@type":"Organization","name":"Ezequiel Gioia"}}</script><script async src="https://eze1981.github.io/assets/js/lazysizes.min.js?v=fcb7109aacc796048242935c33a7f9ab"></script><style></style><link rel="stylesheet" href="https://eze1981.github.io/assets/css/prism.css?v=f89b6e95dce5203e20d25dad4029d9f3"></head><body><div class="container"><header class="js-top"><a class="logo" href="https://eze1981.github.io">gioos</a><div class="top"><nav class="navbar js-navbar"><button class="navbar__toggle js-navbar__toggle" aria-expanded="false">Menu</button><ul class="navbar__menu"></ul></nav><div class="top__search"><form action="https://eze1981.github.io/search.html" class="search"><input type="search" name="q" placeholder="search..."></form></div></div></header><main><article class="post u-wrapper"><header class="hero"><p class="post__meta">By <a href="https://eze1981.github.io/authors/ezequiel-gioia/" rel="author" title="Ezequiel Gioia">Ezequiel Gioia</a> Published on <time datetime="2019-04-15T21:25">April 15, 2019</time></p><h1 class="post__title">Dev Notes</h1></header><div class="post__entry"><div>This post is just a public collection of commands that I always forget.</div><h2>conda</h2><pre><code class="language-bash"># list available environments
+conda env list
+
+# listing installed packages in current environment
+conda list
+
+# activate environment
+conda activate env-name
+
+# install package
+conda install keras
+</code></pre><h2>docker</h2><pre><code class="language-bash"># delete all containers
+docker rm $(docker ps -a -q)
+
+# delete all images
+docker rmi $(docker images -q)
+
+# inspect container
+docker inspect [container-id]
+
+# build image from Dockerfileopendiff
+docker build -t [username]/[image-name] .
+
+# create and run a container
+docker run -it -p 4000:4000 -v $PWD:/var/www [image-name] bash
+</code></pre>(https://github.com/mhart/alpine-node)<h2>files</h2><pre><code class="language-bash"># compress directory
+zip ../elixir-3-app.zip -r * .[^.]*
+</code></pre></div><footer class="post__footer"><div class="post__last-updated">This article was updated on April 20, 2019</div><div class="post__footer__col"><div class="post__share"><a href="https://twitter.com/share?url=https%3A%2F%2Feze1981.github.io%2Fdev-notes%2F&amp;via=eze1981&amp;text=Dev%20Notes" class="js-share twitter" title="Share with Twitter" rel="nofollow"><svg class="icon"><use xlink:href="https://eze1981.github.io/assets/svg/svg-map.svg#twitter"/></svg> </a><a href="http://www.linkedin.com/shareArticle?url=https%3A%2F%2Feze1981.github.io%2Fdev-notes%2F&amp;title=Dev%20Notes" class="js-share linkedin" title="Share with LinkedIn" rel="nofollow"><svg class="icon"><use xlink:href="https://eze1981.github.io/assets/svg/svg-map.svg#linkedin"/></svg></a></div></div><div class="post__bio"><img class="lazyload" data-src="https://www.gravatar.com/avatar/e0ca3e9855587f07564ffea98e432d51?s&#x3D;240" alt="Ezequiel Gioia"><div><h3><a href="https://eze1981.github.io/authors/ezequiel-gioia/" class="inverse" title="Ezequiel Gioia">Ezequiel Gioia</a></h3></div></div></footer></article><div class="comments u-wrapper"><h3 class="u-h5">Comments</h3><div id="disqus_thread"></div><script>var disqus_config = function () {
+                        this.page.url = 'https://eze1981.github.io/dev-notes/';
+                		this.page.identifier = '2';
+                        this.page.title = ' Dev Notes - gioos ';
+                    };
+                
+                    var disqus_loaded = false;
+                
+                    function publiiLoadDisqus() {
+                        if(disqus_loaded) {
+                            return false;
+                        }
+                
+                        var top = document.getElementById('disqus_thread').offsetTop;
+                
+                        if (!disqus_loaded && (window.scrollY || window.pageYOffset) + window.innerHeight > top) {
+                            disqus_loaded = true;
+                
+                            (function () {
+                                var d = document, s = d.createElement('script');
+                                s.src = '//eze1981.disqus.com/embed.js';
+                                s.setAttribute('data-timestamp', +new Date());
+                                (d.head || d.body).appendChild(s);
+                            })();
+                        }
+                    }
+                
+                    publiiLoadDisqus();
+                
+                    window.onscroll = function() {
+                        publiiLoadDisqus();
+                    };</script><noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript></div></main><footer class="footer"><div class="footer__copyright">Powered by Publii</div></footer></div><script defer="defer" src="https://eze1981.github.io/assets/js/jquery-3.2.1.slim.min.js?v=5f48fc77cac90c4778fa24ec9c57f37d"></script><script defer="defer" src="https://eze1981.github.io/assets/js/scripts.min.js?v=f503b0ac46db9f99180b3b9f932c7f9a"></script><script defer="defer" src="https://eze1981.github.io/assets/js/prism.js?v=35af347b20d43de72934bba12b639bea"></script></body></html>
