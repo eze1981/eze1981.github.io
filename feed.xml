@@ -3,7 +3,7 @@
     <title>gioos</title>
     <link href="https://eze1981.github.io/feed.xml" rel="self" />
     <link href="https://eze1981.github.io" />
-    <updated>2019-04-20T22:10:58-04:00</updated>
+    <updated>2020-05-20T11:35:02-04:00</updated>
     <author>
         <name>Ezequiel Gioia</name>
     </author>
@@ -17,15 +17,15 @@
         <link href="https://eze1981.github.io/dev-notes/"/>
         <id>https://eze1981.github.io/dev-notes/</id>
 
-        <updated>2019-04-20T22:09:52-04:00</updated>
+        <updated>2020-05-20T11:28:37-04:00</updated>
             <summary>
                 <![CDATA[
-                    This post is just a public collection of commands that I always&hellip;
+                    This post is just a public collection of commands that I'll always&hellip;
                 ]]>
             </summary>
         <content type="html">
             <![CDATA[
-                <div>This post is just a public collection of commands that I always forget.</div>
+                <div>This post is just a public collection of commands that I'll always forget.</div>
 <h2 id="mcetoc_1d8kh0skb2">conda</h2>
 <pre><code class="language-bash"># list available environments
 conda env list
@@ -57,8 +57,12 @@ docker run -it -p 4000:4000 -v $PWD:/var/www [image-name] bash
 </code></pre>
 (https://github.com/mhart/alpine-node)
 <h2 id="mcetoc_1d8kh0skb2">files</h2>
-<pre><code class="language-bash"># compress directory
+<pre><code class="language-bash">
+# compress directory
 zip ../elixir-3-app.zip -r * .[^.]*
+  
+# list directory sizes
+du -h --max-depth=1 ./ | sort -hr 
 </code></pre>
             ]]>
         </content>

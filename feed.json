@@ -13,15 +13,15 @@
             "id": "https://eze1981.github.io/dev-notes/",
             "url": "https://eze1981.github.io/dev-notes/",
             "title": "Dev Notes",
-            "summary": "This post is just a public collection of commands that I always&hellip;",
-            "content_html": "<div>This post is just a public collection of commands that I always forget.</div>\n<h2 id=\"mcetoc_1d8kh0skb2\">conda</h2>\n<pre><code class=\"language-bash\"># list available environments\nconda env list\n\n# listing installed packages in current environment\nconda list\n\n# activate environment\nconda activate env-name\n\n# install package\nconda install keras\n</code></pre>\n<h2 id=\"mcetoc_1d8kh0skb2\">docker</h2>\n<pre><code class=\"language-bash\"># delete all containers\ndocker rm $(docker ps -a -q)\n\n# delete all images\ndocker rmi $(docker images -q)\n\n# inspect container\ndocker inspect [container-id]\n\n# build image from Dockerfileopendiff\ndocker build -t [username]/[image-name] .\n\n# create and run a container\ndocker run -it -p 4000:4000 -v $PWD:/var/www [image-name] bash\n</code></pre>\n(https://github.com/mhart/alpine-node)\n<h2 id=\"mcetoc_1d8kh0skb2\">files</h2>\n<pre><code class=\"language-bash\"># compress directory\nzip ../elixir-3-app.zip -r * .[^.]*\n</code></pre>",
+            "summary": "This post is just a public collection of commands that I'll always&hellip;",
+            "content_html": "<div>This post is just a public collection of commands that I'll always forget.</div>\n<h2 id=\"mcetoc_1d8kh0skb2\">conda</h2>\n<pre><code class=\"language-bash\"># list available environments\nconda env list\n\n# listing installed packages in current environment\nconda list\n\n# activate environment\nconda activate env-name\n\n# install package\nconda install keras\n</code></pre>\n<h2 id=\"mcetoc_1d8kh0skb2\">docker</h2>\n<pre><code class=\"language-bash\"># delete all containers\ndocker rm $(docker ps -a -q)\n\n# delete all images\ndocker rmi $(docker images -q)\n\n# inspect container\ndocker inspect [container-id]\n\n# build image from Dockerfileopendiff\ndocker build -t [username]/[image-name] .\n\n# create and run a container\ndocker run -it -p 4000:4000 -v $PWD:/var/www [image-name] bash\n</code></pre>\n(https://github.com/mhart/alpine-node)\n<h2 id=\"mcetoc_1d8kh0skb2\">files</h2>\n<pre><code class=\"language-bash\">\n# compress directory\nzip ../elixir-3-app.zip -r * .[^.]*\n  \n# list directory sizes\ndu -h --max-depth=1 ./ | sort -hr \n</code></pre>",
             "author": {
                 "name": "Ezequiel Gioia"
             },
             "tags": [
             ],
             "date_published": "2019-04-15T21:25:16-04:00",
-            "date_modified": "2019-04-20T22:09:52-04:00"
+            "date_modified": "2020-05-20T11:28:37-04:00"
         }
     ]
 }
